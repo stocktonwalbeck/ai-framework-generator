@@ -54,7 +54,7 @@
 
 ## 🎉 You're Live!
 
-Your AI Framework Generator is now:
+Your AI SYSTEM GENERATOR is now:
 - ✅ Hosted on GitHub (version control)
 - ✅ Ready for Vercel deployment
 - ✅ Secured with environment variables
