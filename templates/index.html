@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Framework Generator - Create Any Framework for Any Industry</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-brain"></i>
+                        <h1>AI Framework Generator</h1>
+                    </div>
+                    <p class="tagline">Create powerful frameworks for any industry using AI</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Framework Type Selection -->
+                <section class="framework-types">
+                    <h2>Choose Your Framework Type</h2>
+                    <div class="type-grid" id="frameworkTypes">
+                        <!-- Dynamic content loaded via JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Input Form -->
+                <section class="input-form" id="inputForm" style="display: none;">
+                    <h2>Framework Details</h2>
+                    <form id="frameworkForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="industry">
+                                    <i class="fas fa-industry"></i>
+                                    Industry/Domain
+                                </label>
+                                <input type="text" id="industry" name="industry" placeholder="e.g., Digital Marketing, Software Development, Healthcare" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="purpose">
+                                    <i class="fas fa-bullseye"></i>
+                                    Purpose/Goal
+                                </label>
+                                <input type="text" id="purpose" name="purpose" placeholder="e.g., Improve customer onboarding, Streamline project delivery" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="targetAudience">
+                                    <i class="fas fa-users"></i>
+                                    Target Audience
+                                </label>
+                                <input type="text" id="targetAudience" name="targetAudience" placeholder="e.g., Marketing managers, Startup founders, Team leaders" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="complexity">
+                                    <i class="fas fa-layer-group"></i>
+                                    Complexity Level
+                                </label>
+                                <select id="complexity" name="complexity">
+                                    <option value="simple">Simple - Easy to understand and implement</option>
+                                    <option value="medium" selected>Medium - Balanced detail and usability</option>
+                                    <option value="complex">Complex - Comprehensive and detailed</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="generate-btn" id="generateBtn">
+                            <i class="fas fa-magic"></i>
+                            Generate Framework
+                        </button>
+                    </form>
+                </section>
+
+                <!-- Loading State -->
+                <section class="loading" id="loadingState" style="display: none;">
+                    <div class="loading-animation">
+                        <div class="spinner"></div>
+                        <p>AI is crafting your framework...</p>
+                        <small>This may take a few moments</small>
+                    </div>
+                </section>
+
+                <!-- Results -->
+                <section class="results" id="results" style="display: none;">
+                    <h2>Your Custom Framework</h2>
+                    <div class="framework-output" id="frameworkOutput">
+                        <!-- Dynamic content -->
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="action-btn" id="regenerateBtn">
+                            <i class="fas fa-redo"></i>
+                            Generate Another
+                        </button>
+                        <button class="action-btn secondary" id="exportBtn">
+                            <i class="fas fa-download"></i>
+                            Export Framework
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Examples Section -->
+                <section class="examples">
+                    <h2>Framework Examples</h2>
+                    <div class="examples-grid" id="examplesGrid">
+                        <!-- Dynamic content -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="container">
+                <p>&copy; 2024 AI Framework Generator. Powered by OpenAI GPT-4.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal for framework details -->
+    <div class="modal" id="frameworkModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html> 
